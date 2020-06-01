@@ -19,8 +19,8 @@ const getFoodData = async () => {
             <h5>${searchResult.recipe.yield + ' serving(s)'}</h5>
             <h5>${searchResult.recipe.dietLabels}</h5>
             <h5>${searchResult.recipe.healthLabels}</h5>
-            <h5>${searchResult.recipe.calories}</h5>
-            <h5>${searchResult.recipe.totalWeight}</h5>
+            <h5>${searchResult.recipe.calories + ' calories'}</h5>
+            <h5>${searchResult.recipe.totalWeight + ' grams'}</h5>
         </div>
         `
     });
