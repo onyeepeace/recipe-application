@@ -5,13 +5,15 @@
 }
 
 html, body {
-    min-height: 100%;
+    max-height: 100%;
 }
 
 body {
     width: 100%;
+    margin-bottom: 1rem;
     font-family: monospace;
     background-color: #f6f6f6;
+    align-items: center;
 }
 
 .background {
@@ -35,17 +37,16 @@ h3 {
 }
 
 p {
-    font-size: 20px;
+    font-size: 16px;
     padding-bottom: 10px;
 }
 
-.search {
+form {
     margin-top: 3rem;
     text-align: center;
 }
 
 input {
-    width: 20%;
     padding: 10px 15px;
     border: none;
     border-bottom: 2px solid #cd915a;
@@ -80,7 +81,10 @@ button:hover {
     box-shadow: 2px 2px 10px #cd915a;
     border-radius: 25px;
     padding: 2rem;
-    text-align: center;
+}
+
+.recipe-div > * {
+    padding-bottom: 15px;
 }
 
 .recipe-image {
@@ -88,7 +92,45 @@ button:hover {
     margin: 0 auto 1rem;
 }
 
+.light {
+    display: flex;
+    justify-content: space-between;
+}
+
+.yield {
+    background-color: #f8cda0;
+    font-size: 12px;
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-weight: normal;
+}
+
+.bold {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+mark {
+    background-color: #cd915a;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 50px;
+}
+
 @media screen and (min-width:500px) {
+    img {
+        width: 50%;
+    }
+
     .food-result {
         width: 75%;
         margin: 0 auto;
@@ -100,6 +142,10 @@ button:hover {
 }
 
 @media screen and (min-width:650px) {
+    img {
+        width: 50%;
+    }
+
     .food-result {
         width: 90%;
         margin: 0 auto;
@@ -119,7 +165,6 @@ button:hover {
 
     .food-result {
         grid-template-columns: repeat(3, 1fr);
-        /* grid-gap: 3rem; */
     }
 
     .recipe-div {

@@ -14,13 +14,15 @@ const getFoodData = async () => {
     data.hits.forEach(searchResult => {
         foodDataHtml += `
         <div class="recipe-div">
-            <img src=${searchResult.recipe.image} class="recipe-image">
             <h1>${searchResult.recipe.label}</h1>
-            <h5>${searchResult.recipe.yield + ' serving(s)'}</h5>
-            <h5>${searchResult.recipe.dietLabels}</h5>
-            <h5>${searchResult.recipe.healthLabels}</h5>
-            <h5>${searchResult.recipe.calories + ' calories'}</h5>
-            <h5>${searchResult.recipe.totalWeight + ' grams'}</h5>
+            <img class="recipe-image" src=${searchResult.recipe.image}>
+            <div class="light">
+                <p class="yield">${Math.round(searchResult.recipe.calories) + ' calories'}</p>
+                <p class="yield">${Math.round(searchResult.recipe.totalWeight) + ' grams'}</p>
+            </div>
+            < class="bold">${searchResult.recipe.dietLabels}</p>
+            < class="bold">${searchResult.recipe.healthLabels}</p>
+            <a href=${searchResult.recipe.url} target="_blank"><mark>Directions</mark></a>
         </div>
         `
     });

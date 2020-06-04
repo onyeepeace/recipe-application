@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background">
+    <header class="background">
    
         <img src="images/perfect.jpg" alt="food">
-
         
         <div class="text">
             <h3>Pro Chef</h3>
@@ -19,15 +18,19 @@
             <p>Prepare home made meals like a pro!</p>
         </div>
 
-    </div>
+    </header>
     
-    <div class="search">
-        <input type="text" id="meal" placeholder="Search Food">
-        <button type="submit" id="click"><i class="fas fa-search"></i></button>
-    </div>
+    <main>
+        <form action="">
+            <input type="text" id="meal" placeholder="Search Food">
+            <button id="click" type="submit"><i class="fas fa-search"></i></button>
+        </form>
 
-    <div class="food-result">
-    </div>
+    <!-- Recipes section -->
+        <div class="food-result">
+            <!-- recipes are added here dynamically with JavaScript -->
+        </div>
+    </main>
     
     <script src="index.js"></script>
 </body>
