@@ -20,8 +20,8 @@ const getFoodData = async () => {
                 <p class="yield">${Math.round(searchResult.recipe.calories) + ' calories'}</p>
                 <p class="yield">${Math.round(searchResult.recipe.totalWeight) + ' grams'}</p>
             </div>
-            < class="bold">${searchResult.recipe.dietLabels}</p>
-            < class="bold">${searchResult.recipe.healthLabels}</p>
+            <class="bold">${searchResult.recipe.dietLabels}</p>
+            <class="bold">${searchResult.recipe.healthLabels}</p>
             <a href=${searchResult.recipe.url} target="_blank"><mark>Directions</mark></a>
         </div>
         `
